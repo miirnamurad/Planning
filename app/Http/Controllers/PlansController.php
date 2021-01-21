@@ -15,6 +15,7 @@ class PlansController extends Controller
      */
     public function index(Request $request)
     {
+        //validations
         $request->validate([
             'search' => 'string',
             'start_date' => 'date|required_with:due_date',
